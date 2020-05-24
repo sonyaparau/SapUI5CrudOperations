@@ -140,9 +140,9 @@ module.exports = function(grunt) {
 					ui5: {
 						language: 'EN',
 						transportno: 'I42K902395',
-						package: 'Z801_DEV_PACK_SJOO',
-						bspcontainer: 'Z801_BOOKS_SJOO',
-						bspcontainer_text: 'Books UI5 app Szila'
+						package: 'Z801_DEV_PACK_SOPA',
+						bspcontainer: 'Z801_BOOKS_SOPA',
+						bspcontainer_text: 'Books UI5 app Sonya Paray'
 					},
 					resources: {
 						cwd: 'dist',
@@ -182,11 +182,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-openui5');
-
-	// Server task
-	// grunt.registerTask('serve', function(target) {
-	// 	grunt.task.run('openui5_connect:' + (target || 'src') + ':keepalive');
-	// });
 
 	// register serve task
     grunt.registerTask('serve', ['configureProxies:server', 'connect:connectWebapp', 'watch:watchWebapp']);
