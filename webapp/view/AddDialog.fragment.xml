@@ -1,0 +1,31 @@
+<core:FragmentDefinition id="idBookAddFragment"
+        controllerName="org.ubb.books.controller.BookList"
+        xmlns="sap.m"
+        xmlns:f="sap.ui.layout.form"
+        xmlns:core="sap.ui.core">
+    <Dialog id="idBookAddDialog">
+        <f:SimpleForm id="idBookAddForm" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"
+                      title="{i18n>addBook}"
+                      class="editableForm">
+            <f:content>
+                <core:Title text="{i18n>bookInformation}"/>
+                <Label text="{i18n>isbn}"/>
+                <Input id="isbnInput" value="{/ISBN}" placeholder="ISBN"/>
+                <Label text="{i18n>author}"/>
+                <Input id="authorInput" value="{/Author}" placeholder="Author"/>
+                <Label text="{i18n>title}"/>
+                <Input id="titleInput" value="{/Title}" placeholder="Title"/>
+                <Label text="{i18n>datePublication}"/>
+                <DatePicker value="{/DatePublication}" placeholder="Date"/>
+                <Label text="{i18n>language}"/>
+                <Input id="languageInput" value="{/Language}" placeholder="Language"/>
+                <Label text="{i18n>totalNumber}"/>
+                <Input id="totalNumberInput" value="{/TotalNumber}" placeholder="Total number"/>
+                <Label text="{i18n>availableNumber}"/>
+                <Input id="availableNumberInput" value="{/AvailableNumber}" placeholder="Available number"/>
+                <Button text="{i18n>add}" type="Accept" press="handleSave"/>
+                <Button text="{i18n>cancel}" type="Reject" press="handleCancel"/>
+            </f:content>
+        </f:SimpleForm>
+    </Dialog>
+</core:FragmentDefinition>
