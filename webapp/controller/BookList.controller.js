@@ -92,9 +92,15 @@ sap.ui.define([
                 var sMsg = oBundle.getText("titleReq");
                 MessageToast.show(sMsg);
             }
-            if(oDialogData.Title.language === 0) {
+            if(oDialogData.Language.length === 0) {
                 validForm = false;
                 var sMsg = oBundle.getText("langReq");
+                MessageToast.show(sMsg);
+            }
+            if(oDialogData.Language !== 'EN' || oDialogData.Language !== 'DE' || oDialogData.Language !== 'RU'
+            || oDialogData.Language !== 'FR' || oDialogData.Language !== 'PT' || oDialogData.Language !== 'ES') {
+                validForm = false;
+                var sMsg = oBundle.getText("invalidLanguage");
                 MessageToast.show(sMsg);
             }
             oDialogData.AvailableNumber = parseInt(oDialogData.AvailableNumber);
@@ -188,6 +194,12 @@ sap.ui.define([
             if(oDialogData.Title.language === 0) {
                 validForm = false;
                 var sMsg = oBundle.getText("langReq");
+                MessageToast.show(sMsg);
+            }
+            if(oDialogData.Language !== 'EN' || oDialogData.Language !== 'DE' || oDialogData.Language !== 'RU'
+                || oDialogData.Language !== 'FR' || oDialogData.Language !== 'PT' || oDialogData.Language !== 'ES') {
+                validForm = false;
+                var sMsg = oBundle.getText("invalidLanguage");
                 MessageToast.show(sMsg);
             }
             oDialogData.AvailableNumber = parseInt(oDialogData.AvailableNumber);

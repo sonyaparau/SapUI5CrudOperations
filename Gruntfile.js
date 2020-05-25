@@ -47,15 +47,6 @@ module.exports = function(grunt) {
                 }
             },
             proxies: [
-                // {
-                //     context: '/resources',
-                //     host: '<%= settings.proxy.host %>',
-                //     port: '<%= settings.proxy.port %>',
-                //     https: false,
-                //     rewrite: {
-                //         '/resources': '/sap/public/bc/ui5_ui5/resources'
-                //     }
-				// }, 
 				{
                     context: '/sap/opu/odata',
                     host: '<%= settings.proxy.host %>',
