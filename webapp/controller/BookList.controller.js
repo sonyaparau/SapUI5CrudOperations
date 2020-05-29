@@ -97,8 +97,8 @@ sap.ui.define([
                 var sMsg = oBundle.getText("langReq");
                 MessageToast.show(sMsg);
             }
-            if(oDialogData.Language !== 'EN' || oDialogData.Language !== 'DE' || oDialogData.Language !== 'RU'
-            || oDialogData.Language !== 'FR' || oDialogData.Language !== 'PT' || oDialogData.Language !== 'ES') {
+            if(!(oDialogData.Language !== 'EN' || oDialogData.Language != 'DE' || oDialogData.Language != 'RU'
+            || oDialogData.Language != 'FR' || oDialogData.Language != 'PT' || oDialogData.Language != 'ES')) {
                 validForm = false;
                 var sMsg = oBundle.getText("invalidLanguage");
                 MessageToast.show(sMsg);
@@ -196,8 +196,8 @@ sap.ui.define([
                 var sMsg = oBundle.getText("langReq");
                 MessageToast.show(sMsg);
             }
-            if(oDialogData.Language !== 'EN' || oDialogData.Language !== 'DE' || oDialogData.Language !== 'RU'
-                || oDialogData.Language !== 'FR' || oDialogData.Language !== 'PT' || oDialogData.Language !== 'ES') {
+            if(!(oDialogData.Language !== 'EN' || oDialogData.Language != 'DE' || oDialogData.Language != 'RU'
+                || oDialogData.Language != 'FR' || oDialogData.Language != 'PT' || oDialogData.Language != 'ES')) {
                 validForm = false;
                 var sMsg = oBundle.getText("invalidLanguage");
                 MessageToast.show(sMsg);
